@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import { React,  useState } from "react"
+import { Routes, Route } from "react-router-dom"
+import Footer from "./Components/Footer"
+import Header from "./Components/Header"
+import DogEdit from "./Pages/DogEdit"
+import DogIndex from "./Pages/DogIndex"
+import DogNew from "./Pages/DogNew"
+import DogShow from "./Pages/DogShow"
+import Home from "./Pages/Home"
+import NotFound from "./Pages/NotFound"
+import mockDogs from "./mockDogs"
 import './App.css';
 
-function App() {
+const App = () => {
+  const [dogs, setDogs] = useState(mockDogs)
+
+  console.log(dogs)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/dogindex" element={<DogIndex />} />
+        <Route path="/dogshow" element={<DogShow />} />
+        <Route path="/dognew" element={<DogNew />} />
+        <Route path="/dogedit" element={<DogEdit />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
+    </>
+  )
 }
 
 export default App;
