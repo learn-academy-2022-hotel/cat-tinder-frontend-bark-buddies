@@ -8,3 +8,7 @@ import App from './App';
 //   const linkElement = screen.getByText(/learn react/i);
 //   expect(linkElement).toBeInTheDocument();
 // });
+
+describe("<DogShow />", () => {
+    it("renders dog cards with enjoys", () => {})
+  })
