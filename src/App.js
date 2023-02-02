@@ -14,14 +14,14 @@ import './App.css';
 const App = () => {
   const [dogs, setDogs] = useState(mockDogs)
 
-  console.log(dogs)
+ 
   return (
     <>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/dogindex" element={<DogIndex />} />
-        <Route path="/dogshow" element={<DogShow />} />
+        <Route path="/dogindex" element={<DogIndex dogs={dogs} />} />
+        <Route path="/dogshow/:id" element={<DogShow dogs={dogs}/>} />
         <Route path="/dognew" element={<DogNew />} />
         <Route path="/dogedit" element={<DogEdit />} />
         <Route path="*" element={<NotFound />} />
