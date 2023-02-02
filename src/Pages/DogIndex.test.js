@@ -27,5 +27,3 @@ describe("<DogIndex />", () => {
   })
 })
 
-// const div = document.createElement("div")
-    // render(<DogIndex />, div)
