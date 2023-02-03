@@ -35,9 +35,9 @@ const DogShow = ({ dogs }) => {
                 <CardText>
                    Age: {currentDog.age}    
                 </CardText>
-                <Button>
-                    Button
-                </Button>
+                <NavLink to={`/dogedit/${currentDog.id}`} className="nav-link">
+                    Edit Dog Profile
+                </NavLink>
                 </CardBody>
                 </Card>
             </>

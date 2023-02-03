@@ -22,7 +22,7 @@ describe("<Header />", () => {
           div
         )
         const logo = screen.getByRole("img")
-        expect(logo).toHaveAttribute("src", "dogLogo.jpg")
+        expect(logo).toHaveAttribute("src", "dogLogo.png")
         expect(logo).toHaveAttribute("alt", "Dog Tinder logo with outline of Dog")
         
       })
