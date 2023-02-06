@@ -8,24 +8,27 @@ const Header = () => {
     return(
       
         <Nav className="header-nav">
+    <div className="Logo">
         <NavItem>
-          <NavLink to="/">
+          <NavLink to="/dogindex">
             <img
               src={dogLogo}
               alt="Dog Tinder logo with outline of Dog"
               className="Dog-logo"
-            />
+              />
           </NavLink>
         </NavItem>
+    </div>        
+    <div className="NavBar">
         <NavItem>
-          <NavLink to="/dogindex" className="nav-link">
+        <NavLink to="/dogindex" className="nav-link">
             Meet the Dogs
-          </NavLink>
+        </NavLink>
         </NavItem>
         <NavItem>
-          <NavLink to="/dognew" className="nav-link">
+        <NavLink to="/dognew" className="nav-link">
             Add a New Dog
-          </NavLink>
+        </NavLink>
         </NavItem>
         <NavItem>
             <a
@@ -37,6 +40,7 @@ const Header = () => {
             </a>
 
         </NavItem>
+    </div>
         </Nav>
 
     )

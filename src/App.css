@@ -81,11 +81,15 @@
 .Dog-logo {
   width: 500px;
   height: auto;
+  display: flex;
+  align-items: center;
 }
 
 .profile-images {
-  width: 500px;
-  height: auto;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  padding: 20px;
 }
 
 .card {
@@ -100,12 +104,70 @@
 
 .nav-link {
   display: inline-block;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
   color: #333;
   text-decoration: none;
   transition: background-color 0.3s;
+  display:flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  padding-left: 80px;
+  padding-bottom: 10px;
 }
 
 .nav-link:hover {
   background-color: #eee;
+}
+
+.header-nav.nav{
+  list-style-type: none;
+  display:flex;
+  flex-wrap: wrap;
+
+}
+.Logo {
+  /* display:flex;
+  align-items: center;
+  justify-content: center; */
+  padding-left: 25%;
+  padding-right: 25%;
+}
+
+.NavBar {
+ display: flex;
+ padding-left: 25%;
+}
+
+.dog-show-cards{
+  display:flex;
+justify-content: center;
+text-align: center;
+} 
+.profilePic {
+  height: auto;
+  width: 450px;
+}
+
+.cardBody{
+  text-align: center;
+  font-size: 24px;
+  padding: 0;
+}
+.createForm {
+  width: 100px;
+}
+.row {
+width: 100px;
+}
+
+.card card-body border-dark{
+  border: 2px solid black;
+}
+.indCard{
+  border: 2px solid black;   
+
+}
+.btn{
+ display: flex;
+ padding-top: 10px;
 }

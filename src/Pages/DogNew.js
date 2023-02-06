@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Form, FormGroup, Label, Input, Button } from "reactstrap"
+import { Form, FormGroup, Label, Input, Button, Row, Col } from "reactstrap"
 import { useNavigate } from "react-router-dom"
 
 
@@ -21,37 +21,77 @@ const DogNew = ({ createDog }) => {
 
   return(
     <> <h1>Add a New Dog!</h1>
-      <Form>
-        <FormGroup>
-          <Label for="name">Name</Label>
-          <Input type="text" name="name" onChange={handleChange} value={newDog.name} />
-        </FormGroup>
-      </Form>
-      <Form>
-        <FormGroup>
-          <Label for="age">Age</Label>
-          <Input type="text" name="age" onChange={handleChange} value={newDog.age}  />
-        </FormGroup>
-      </Form>
-      <Form>
-        <FormGroup>
-          <Label for="enjoys">Enjoys</Label>
-          <Input type="text" name="enjoys" onChange={handleChange} value={newDog.enjoys}  />
-        </FormGroup>
-      </Form>
-      <Form>
-        <FormGroup>
-          <Label for="image">Image</Label>
-          <Input type="text" name="image" onChange={handleChange} value={newDog.image}  />
-        </FormGroup>
-      </Form>
+
+        <Form className="createForm">
+          <Row>
+            <Col md={2}>
+          <FormGroup>
+            <Label for="name">
+              Name:
+            </Label>
+            <Input
+              name="name"
+              type="text"
+              placeholder="Name"
+              onChange={handleChange} 
+              value={newDog.name}
+              />
+          </FormGroup>
+              </Col>
+          </Row>
+          <Row>
+          <FormGroup>
+          <Label for="age">
+              Age:
+            </Label>
+            <Input
+              name="age"
+              type="text"
+              placeholder="How old are you?"
+              onChange={handleChange} 
+              value={newDog.age}
+            />
+          </FormGroup>
+          </Row>
+          <Row>
+          <FormGroup>
+          <Label for="enjoys">
+              Enjoys:
+            </Label>
+            <Input
+              name="enjoys"
+              type="text"
+              placeholder="What do you enjoy?"
+              onChange={handleChange} 
+              value={newDog.enjoys}
+            />
+          </FormGroup>
+          </Row>
+          <Row>
+          <FormGroup>
+          <Label for="image">
+              Image URL:
+            </Label>
+            <Input
+              name="image"
+              type="text"
+              placeholder="Image URL"
+              onChange={handleChange} 
+              value={newDog.image}
+            />
+          </FormGroup>
+          </Row>
+        </Form>
       <div>
-        <Button onClick={handleSubmit} name="submit">
+        <Button className="submitBtn" onClick={handleSubmit} name="submit">
           Submit Dog
         </Button>
       </div>
     </>
     )
 }
+
+
+
 
 export default DogNew;
